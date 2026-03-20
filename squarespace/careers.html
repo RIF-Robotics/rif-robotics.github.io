@@ -45,6 +45,42 @@
   .remote { background-color: #e6f7ff; color: #0073e6; }
   .onsite { background-color: #f3e5f5; color: #8e24aa; }
   .hybrid { background-color: #e6ffe6; color: #2d862d; }
+
+  @media screen and (max-width: 768px) {
+  /* Hide the table headers on mobile */
+  .jobs-table thead {
+    display: none;
+  }
+
+  /* Force table elements to stack vertically */
+  .jobs-table, .jobs-table tbody, .jobs-table tr, .jobs-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Style each row as a card */
+  .jobs-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  }
+
+  /* Adjust cell padding and remove borders */
+  .jobs-table td {
+    padding: 8px 5px;
+    border-bottom: none;
+    text-align: left;
+  }
+
+  /* Make the job title stand out more on mobile */
+  .jobs-table td:first-child {
+    font-size: 16px;
+    padding-bottom: 12px;
+  }
+}
 </style>
 
 <!-- tags: hybrid, onsite, or remote -->
